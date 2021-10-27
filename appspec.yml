@@ -3,7 +3,7 @@ os: linux
 
 files:
     - source: / 
-      destination: /home/ubuntu/node-express-realworld-example-app
+      destination: /home/ubuntu/back/node-express-realworld-example-app
       timeout: 300
      
       
@@ -11,12 +11,6 @@ files:
 
 hooks:
    
-   
-   BeforeInstall:
-         - location: /script/stop_server.sh
-           timeout: 300
-           runas: root
-      
    ApplicationStart:
          - location: /script/start_server.sh
            timeout: 300
