@@ -11,6 +11,12 @@ files:
 
 hooks:
    
+   
+   BeforeInstall:
+         - location: /script/stop_server.sh
+           timeout: 300
+           runas: root
+      
    ApplicationStart:
          - location: /script/start_server.sh
            timeout: 300
