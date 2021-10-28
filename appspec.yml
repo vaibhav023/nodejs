@@ -1,6 +1,6 @@
 version: 0.0
 os: linux 
-
+runas: root
 files:
     - source: / 
       destination: /home/ubuntu/node-express-realworld-example-app
@@ -14,4 +14,5 @@ hooks:
    ApplicationStart:
          - location: /script/start_server.sh
            timeout: 300
+           
            
